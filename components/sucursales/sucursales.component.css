@@ -1,0 +1,88 @@
+h1 {
+    text-align: center;
+    padding-top: 2ex;
+    font-family: sans-serif;
+    font-size: 70px;
+}
+
+p {
+    font-size: 120%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1cm;
+}
+
+h3 {
+    text-align: center;
+    padding-top: 1cm;
+    padding-left: 1ex;
+    padding-bottom: 0cm;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+}
+
+.box {
+    width: 300;
+    background: rgb(75, 74, 74);
+    text-align: left;
+    margin-top: 3%;
+    color: white;
+    padding: 5%;
+    margin-bottom: 4cm;
+    
+}
+
+h1 {
+    color: rgb(89, 149, 228);
+}
+
+.responsive{
+    max-width:100%;
+    max-height:100%;
+}
+ 
+.center{
+    position: relative;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+ /*
+*/
+.parent{
+    position: absolute;
+    
+}
+
+
+#sede_container {
+    display:table;
+    margin:0 auto;   
+    text-align:center;
+    width: 600 px;
+    
+}
+
+.logoJekmy{
+    display:table;
+    margin:0 auto;   
+    text-align:center;
+    width: 600px;
+}
+
+.fotoRecepcion{
+    display:table;
+      
+    width: 39%;
+    margin:20px;
+    display: inline-block;
+    text-align: center
+}
+
+.fotoPuesto{
+    display:table;
+    width: 50%;
+    margin:20px;
+    display: inline-block;
+    text-align: center
+}

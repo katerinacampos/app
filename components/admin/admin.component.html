@@ -1,0 +1,119 @@
+<div class="container text-black rounded shadow-lg p-3 mb-5 text-center">
+    <h1>Tabla de Administración</h1>
+    <table class="table table-striped">
+        <thead class="table thead-dark">
+            <th>Email</th>
+            <th>Fecha (Dia/Mes/Año)</th>
+            <th>Hora</th>
+            <th>Seleccion</th>
+            <th>Servicio </th>
+            <th></th>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let c of Horas">
+                <th>{{c.email}}</th>
+                <th>
+                    <i>{{c.dia}}</i>/<i>{{c.mes}}</i>/<i>{{c.anio}}</i>
+                </th>
+                <th>
+                    <i *ngIf="c.hora==0">8:00-8:30</i>
+                    <i *ngIf="c.hora==1">8:30-9:00 </i>
+                    <i *ngIf="c.hora==2">9:00-9:30</i>
+                    <i *ngIf="c.hora==3">9:30-10:00</i>
+                    <i *ngIf="c.hora==4">10:00-10:30</i>
+                    <i *ngIf="c.hora==5">10:30-11:00</i>
+                    <i *ngIf="c.hora==6">11:00-11:30</i>
+                    <i *ngIf="c.hora==7">11:30-12:00</i>
+                    <i *ngIf="c.hora==8">12:00-12:30</i>
+                    <i *ngIf="c.hora==9">12:30-13:00</i>
+                    <i *ngIf="c.hora==10">14:30-15:00</i>
+                    <i *ngIf="c.hora==11">15:00-15:30</i>
+                    <i *ngIf="c.hora==12">15:30-16:00</i>
+                    <i *ngIf="c.hora==13">16:00-16:30</i>
+                    <i *ngIf="c.hora==14">16:30-17:00</i>
+                </th>
+                <th>
+                    <i *ngIf="c.seleccion==1">Contratar Servicio</i>
+                    <i *ngIf="c.seleccion==2">Actualizar Servicio</i>
+                </th>
+
+                <th>
+                    <i *ngIf="c.seleccion==1">
+                        <i *ngIf="c.servicio_contratacion==1">Reparación de disco duro</i>
+                        <i *ngIf="c.servicio_contratacion==2">Instalación de programas/formateo</i>
+                        <i *ngIf="c.servicio_contratacion==3">Armado de equipo/Cotizaciones</i>
+                    </i>
+
+                    <i *ngIf="c.seleccion==2">
+                        <i *ngIf="c.servicio_actualizacion==1">Cambio de disco duro</i>
+                        <i *ngIf="c.servicio_actualizacion==2">Reparación y/o recuperacion de datos de disco</i>
+                        <i *ngIf="c.servicio_actualizacion==3">Inclusión de nuevos elementos de hardware</i>
+                    </i>
+                </th>
+
+                <th>
+                    <button type="submit" class="btn btn-primary" (click)="aceptarHora(c.hora,c.dia,c.mes,c.anio)">Aceptar</button>
+                </th>
+            </tr>
+        </tbody>
+        
+
+    </table>
+
+    <h1>Tabla de Horas Aceptadas</h1>
+    <table class="table table-striped" >
+        <thead class="table c1">
+            <th>Email</th>
+            <th>Fecha (Dia/Mes/Año)</th>
+            <th>Hora</th>
+            <th>Seleccion</th>
+            <th>Servicio </th>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let c of HorasAceptadas">
+                <th>{{c.email}}</th>
+                <th>
+                    <i>{{c.dia}}</i>/<i>{{c.mes}}</i>/<i>{{c.anio}}</i>
+                </th>
+                <th>
+                    <i *ngIf="c.hora==0">8:00-8:30</i>
+                    <i *ngIf="c.hora==1">8:30-9:00 </i>
+                    <i *ngIf="c.hora==2">9:00-9:30</i>
+                    <i *ngIf="c.hora==3">9:30-10:00</i>
+                    <i *ngIf="c.hora==4">10:00-10:30</i>
+                    <i *ngIf="c.hora==5">10:30-11:00</i>
+                    <i *ngIf="c.hora==6">11:00-11:30</i>
+                    <i *ngIf="c.hora==7">11:30-12:00</i>
+                    <i *ngIf="c.hora==8">12:00-12:30</i>
+                    <i *ngIf="c.hora==9">12:30-13:00</i>
+                    <i *ngIf="c.hora==10">14:30-15:00</i>
+                    <i *ngIf="c.hora==11">15:00-15:30</i>
+                    <i *ngIf="c.hora==12">15:30-16:00</i>
+                    <i *ngIf="c.hora==13">16:00-16:30</i>
+                    <i *ngIf="c.hora==14">16:30-17:00</i>
+                </th>
+                <th>
+                    <i *ngIf="c.seleccion==1">Contratar Servicio</i>
+                    <i *ngIf="c.seleccion==2">Actualizar Servicio</i>
+                </th>
+
+                <th>
+                    <i *ngIf="c.seleccion==1">
+                        <i *ngIf="c.servicio_contratacion==1">Reparación de disco duro</i>
+                        <i *ngIf="c.servicio_contratacion==2">Instalación de programas/formateo</i>
+                        <i *ngIf="c.servicio_contratacion==3">Armado de equipo/Cotizaciones</i>
+                    </i>
+
+                    <i *ngIf="c.seleccion==2">
+                        <i *ngIf="c.servicio_actualizacion==1">Cambio de disco duro</i>
+                        <i *ngIf="c.servicio_actualizacion==2">Reparación y/o recuperacion de datos de disco</i>
+                        <i *ngIf="c.servicio_actualizacion==3">Inclusión de nuevos elementos de hardware</i>
+                    </i>
+                </th>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

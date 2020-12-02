@@ -1,0 +1,24 @@
+<div class="container text-black rounded shadow-lg p-3 mb-5 text-center">
+   <div class="container">  
+      <h1>Iniciar Sesión</h1>
+      <mat-form-field>
+        <input  class="form-control mb-0" type="text"  placeholder="Correo" [(ngModel)]="correo">
+    </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input  class="form-control" type="password" placeholder="Contraseña" [(ngModel)]="pass">
+    </mat-form-field>
+      <br>
+    </div>
+    <!--<mat-checkbox class="">Recordarme</mat-checkbox> -->
+    <br>
+      <p style="color: red;" *ngIf="loged_sucess==0">¡Credenciales Incorrectas!</p>
+      <button type="submit" class="btn btn-primary" *ngIf='correo != "" && pass != ""' (click)="login(correo,pass)">Ingresar</button>
+    <div class="xd">
+      <!--<a href="#">Recuperar contraseña</a>-->
+      <br>
+      <a href="/register"> Crear cuenta</a>
+    </div>
+
+    <!--<p>{{loged_sucess}}</p>-->
+</div>

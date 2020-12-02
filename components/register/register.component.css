@@ -1,0 +1,10 @@
+.pad1{
+    float: inline-start;
+    
+}
+.pad2{
+    padding-inline-end: 470px;
+}
+body{
+    background-color: darkgray;
+}

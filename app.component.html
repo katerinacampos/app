@@ -1,0 +1,22 @@
+<mat-toolbar class="mat-elevation-z6" style="background-color: darkblue;">
+   <span style="color:white; font-size: 37px;">JEKMY</span>
+   <button style="color: white;" class="btn btn" routerLink="/welcome">¿Quienes somos?</button>
+   <button style="color: white;" class="btn btn" routerLink="/login" *ngIf='logged==0'>Iniciar Sesion</button>
+   <button style="color: white;" class="btn btn" routerLink="/register" *ngIf='logged==0'>Registrate Aqui</button>
+   <button style="color: white;" class="btn btn" routerLink="/form" *ngIf='logged==1 && admin==0' >Reserva tus horas aqui!</button>
+   <button style="color: white;" class="btn btn" routerLink="/admin" *ngIf="admin==1">Administrar Horas</button>
+   <button style="color: white;" class="btn btn" routerLink="/sucursales">Nuestras Sucursales</button>
+   
+   <span style="flex: 1 1 auto;"></span>
+   <button style="color: white; background-color: red;" class="btn rounded" (click)="eliminateCache()" *ngIf='logged==1'>Cerrar Sesión</button>
+</mat-toolbar>
+
+<!--<p>correo:{{correo}}</p>-->
+<!--<p>logged:{{logged}}</p>-->
+<!--<p>admin:{{admin}}</p>-->
+
+<router-outlet></router-outlet>
+
+<footer>
+   <p style="text-align: center; margin-left: 10px;">Copyright &copy; 2020</p>
+</footer>

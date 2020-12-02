@@ -1,0 +1,30 @@
+<h1 class="text-center mt-2 mb-2">Bienvenido al formulario de registro</h1>
+<div class="container text-black rounded shadow-lg p-3 mb-5 text-center" style="width: 50%;">
+    <div class="form-row">
+        <div class="col pb-5">
+            <input type="text" class="form-control" placeholder="Ingrese su nombre completo" [(ngModel)]="nombre">
+        </div>
+
+    </div>
+    <div class="form-row">
+        <div class="col pb-5">
+            <input type="email" class="form-control" placeholder="Ingrese su correo electonico" [(ngModel)]="correo" (ngModelChange)="checkUser(correo)">
+            <p style="color: red;" *ngIf="usuario_existe==1">Ups! ese correo ya está en uso.</p>
+        </div>
+        
+        <div class="col-6 pb-5">
+            <input type="text" class="form-control" placeholder="Ingrese su telefono para contactarse." [(ngModel)]="telefono">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col">
+            <input type="password" class="form-control" placeholder="Ingrese una contraseña"
+                pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*" required maxlength="10" required [(ngModel)]="pass">
+            <mat-hint>Ingrese una contraseña de max 10 caracteres, incluyendo
+                una mayuscula y un numero
+            </mat-hint>
+        </div>
+    </div>
+    <button *ngIf='nombre !="" && correo !="" && telefono !="" && pass !="" && usuario_existe==0' 
+    mat-button 
+    class="btn btn-primary m-4 mt-4" (click)="regUser(nombre,correo,telefono,pass)"><a href="/"></a> Registrarse</button>
