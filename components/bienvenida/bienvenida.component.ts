@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BienvenidaComponent implements OnInit {
 
+  size_services=256;
+  margin_services=10;
+
   constructor() { }
 
   ngOnInit(): void {
