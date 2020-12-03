@@ -17,7 +17,7 @@
 
               <input type="date" id="inputVigencia" [(ngModel)]="date" class="form-control form-row"
                 (ngModelChange)="getDate()" min="{{actual_date}}" />
-              <p style="color: red" *ngIf="date_picked==0"> Inserta una fecha.</p>
+              <p style="color:rgb(248, 105, 38)" *ngIf="date_picked==0"> Inserta una fecha.</p>
             </b>
           </i>
 
@@ -36,9 +36,10 @@
             <b>
               <i>
                 <p>
-                  Selecciona un horario:
-                  <select class="form-control" style="text-align: center; width:41%;margin-left: 250px;"
-                    [(ngModel)]="horario">
+                  Selecciona un horario: 
+                  
+                  <select class="form-control" style="text-align: center; width:38%;margin-left: 200px;" 
+                    [(ngModel)]="horario"> 
                     <!---->
                     <option [ngValue]="-1" selected disabled>Selecciona Aquí...</option>
                     <option *ngIf="hora_0==0" [ngValue]="0">8:00-8:30</option>
@@ -101,7 +102,7 @@
             </ul>
 
             <ul class="list-group">
-              <li class="list-group-item">+</li>
+              <li style="color: whitesmoke; background-color: rgb(248, 105, 38) " class="list-group-item">+</li>
 
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 10:30-11:00
@@ -125,7 +126,7 @@
               </li>
             </ul>
             <ul class="list-group">
-              <li class="list-group-item">-Horario de Colación de 13:00 a 14:30-</li>
+              <li style="color: whitesmoke;background-color: rgb(248, 105, 38)" class="list-group-item">-Horario de Colación de 13:00 a 14:30-</li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 14:30-15:00
                 <span class="badge badge-pill badge-danger" *ngIf="hora_10==1">X</span>
@@ -155,7 +156,7 @@
                   <p>
                     Selecciona si quieres contratar o actualizar: <br />
                     <br>
-                    <select class="form-control" style="text-align: center; width:41%;margin-left: 250px;"
+                    <select class="form-control" style="text-align: center; width:38%;margin-left: 200px;"
                       [(ngModel)]="servicio">
                       <option [ngValue]="-1" selected disabled>Selecciona Aquí...</option>
                       <option [ngValue]="1">Contratar Servicio</option>
@@ -183,7 +184,7 @@
                       <p>
                         Tipo de servicio (Contratación):<br />
                         <br>
-                        <select class="form-control" style="text-align: center; width:41%;margin-left: 250px;"
+                        <select class="form-control" style="text-align: center; width:38%;margin-left: 200px;"
                           [(ngModel)]="servicio_contratacion">
                           <option selected disabled>Selecciona Aquí...</option>
                           <option [ngValue]="1">Reparación de disco duro</option>
@@ -202,7 +203,7 @@
                       <p>
                         Tipo de servicio (Actualización):<br />
                         <br>
-                        <select class="form-control" style="text-align: center; width:41%;margin-left: 250px;"
+                        <select class="form-control" style="text-align: center; width:38%;margin-left: 200px;"
                           [(ngModel)]="servicio_actualizacion">
                           <option selected disabled>Selecciona Aquí...</option>
                           <option [ngValue]="1">Cambio de disco duro</option>
